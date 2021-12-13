@@ -22,6 +22,8 @@
                       description: "OpenVPN"
                     - value: "wireguard"
                       description: "Wireguard"
+                    - value: "nordvpn"
+                      description: "NordVPN"
               - variable: openvpn
                 label: "OpenVPN Settings"
                 schema:
@@ -41,6 +43,39 @@
                         type: string
                         default: ""
                         required: true
+              - variable: nordvpn
+                label: "NordVPN Settings"
+                schema:
+                  type: dict
+                  show_if: [["type", "=", "nordvpn"]]
+                  attrs:
+                    - variable: username
+                      label: "authentication username"
+                      description: "authentication username"
+                      schema:
+                        type: string
+                        default: ""
+                        required: true
+                    - variable: password
+                      label: "authentication password"
+                      description: "authentication password"
+                      schema:
+                        type: string
+                        default: ""
+                        required: true
+                    - variable: technology
+                      label: "NordVPN Connection type"
+                      description: "Connection type from: openvpn,NordLynx"
+                      schema:
+                        type: string
+                        default: "NordLynx"
+                        required: true
+                    - variable: connect
+                      label: "Connection Type/Location"
+                      description: "Connection locaiton and/or group"
+                      schema:
+                        type: string
+                        default: "-g P2P United_States"
               - variable: killSwitch
                 label: "Enable killswitch"
                 schema:

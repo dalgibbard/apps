@@ -18,6 +18,16 @@ wireguardImage:
   # -- Specify the WireGuard image pull policy
   pullPolicy: IfNotPresent
 
+# -- WireGuard specific configuration
+# @default -- See below
+wireguardImage:
+  # -- Specify the WireGuard image
+  repository: bubuntux/nordvpn
+  # -- Specify the WireGuard image tag
+  tag: v3.12.1.1-1@sha256:00b7f3e49d6c7a6c105a897d1ac9bca85ef48089f9dd51ac55e0f1e26786396b
+  # -- Specify the WireGuard image pull policy
+  pullPolicy: IfNotPresent
+
 # -- promtail specific configuration
 # @default -- See below
 promtailImage:
@@ -848,6 +858,15 @@ addons:
       # Only using password is enough
       username: ""
       password: ""
+
+    # -- NordVPN specific configuration
+    # @default -- See below
+    nordvpn:
+      # -- Credentials to connect to the VPN Service (used with -a)
+      username: ""
+      password: ""
+      technology: "NordLynx"
+      connect: "-g P2P United_States"
 
     killSwitch: true
     excludedNetworks_IPv4: []

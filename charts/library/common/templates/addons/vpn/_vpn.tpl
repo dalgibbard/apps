@@ -12,6 +12,9 @@ It will include / inject the required templates based on the given values.
     {{- include "common.addon.wireguard" . }}
   {{- end -}}
 
+  {{- if eq "nordvpn" .Values.addons.vpn.type -}}
+    {{- include "common.addon.nordvpn" . }}
+  {{- end -}}
 
   {{- $_ := set .Values.persistence "vpnconfig" .Values.addons.vpn.configFile -}}
 

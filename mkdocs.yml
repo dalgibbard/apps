@@ -1,13 +1,13 @@
 # Project Information
-site_name: TrueCharts
+site_name: TrueCharts_dalgibbard
 site_description: 'Project Documentation for TrueCharts'
 site_author: 'TrueCharts Team'
 docs_dir: docs/
 site_url: 'https://truecharts.org'
 
 # Repository
-repo_name: 'truecharts/apps'
-repo_url: 'https://github.com/truecharts/apps'
+repo_name: 'dalgibbard/apps'
+repo_url: 'https://github.com/dalgibbard/apps'
 edit_uri: ""
 
 copyright: Copyright &copy; 2020 - 2021 The TrueCharts Project

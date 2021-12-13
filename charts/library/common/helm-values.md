@@ -250,5 +250,11 @@ This chart is used by a lot of our Apps to provide sane defaults and logic.
 | wireguardImage.pullPolicy | string | `"IfNotPresent"` | Specify the WireGuard image pull policy |
 | wireguardImage.repository | string | `"ghcr.io/truecharts/wireguard"` | Specify the WireGuard image |
 | wireguardImage.tag | string | `"v1.0.20210914@sha256:bd73721b87689a1b48c648f3bfc9dbd8b8916199610f0d6c1f58cc6956eedb7e"` | Specify the WireGuard image tag |
+| nordvpnImage | object | See below | NordVPN specific configuration |
+| nordvpnImage.pullPolicy | string | `"IfNotPresent"` | Specify the NordVPN image pull policy |
+| nordvpnImage.repository | string | `"bubuntux/nordvpn"` | Specify the NordVPN image |
+| nordvpnImage.tag | string | `"v3.12.1.1-1@sha256:00b7f3e49d6c7a6c105a897d1ac9bca85ef48089f9dd51ac55e0f1e26786396b"` | Specify the NordVPN image tag |
+| addons.vpn.nordvpn.username | string | `""` | Credentials to connect to the VPN Service |
+| addons.vpn.nordvpn.password | string | `""` | Credentials to connect to the VPN Service |
 
 All Rights Reserved - The TrueCharts Project
